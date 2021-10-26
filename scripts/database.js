@@ -1,5 +1,5 @@
 const database = {
-    govenors: [
+    governors: [
     {   id: 1,
         name: "Darth Vader",
         status: true
@@ -146,4 +146,5 @@ export const purchaseMineral = () => {
         // application can re-render and update state
         document.dispatchEvent( new CustomEvent("stateChanged") )
     }
-}
+
+
