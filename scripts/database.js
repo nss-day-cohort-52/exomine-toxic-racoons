@@ -1,4 +1,10 @@
 const database = {
+    orderBuilder: {
+        id: 1,
+        governorId: 2,
+        facilityId: 3,
+        mineralId: 4
+    },
     governors: [
     {   id: 1,
         name: "Darth Vader",

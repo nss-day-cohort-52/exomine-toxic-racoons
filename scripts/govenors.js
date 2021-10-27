@@ -1,39 +1,29 @@
-import {getGovenors } from "database.js"
-
-export const govenors = () => {
-    const govenors = getGovenors();
-    return `<header class="header">
-    <h1>
-    Govenors 
-    </h1>
-    <select>
-    <option>
-    Darth Vader
-    </option>
-    <option>
-    Spider Man
-    </option>
-    <option>
-    Dr. Strange 
-    </option>
-    <option>
-    Wonder Woman
-    </option>
-    </select> 
-
-    <h2>
-    choose a govenor
-    </h2>
-    <select>
-  <option>
-  Choose govenor 
-  </option>
-  ${govenors.map((govenor) => {
-    return `
-    <option>
-    ${govenor.fullName}
-    </option>
-    `;})}
-    </select>
-    `;
-  };
+import { getGovernors } from "./database.js"
+const governors = getGovernors()
+document.addEventListener(
+    "change",
+    (event) => {
+        if (event.target.name === "governor") {
+            getGovernors()
+        }
+    }    
+    )
+    export const coloniesGovernor = () => {
+      let html = "<ul>"
+      // Use .map() for converting objects to <li> elements
+          return `<select id="governorLocations" name="governorLocations" size="4" multiple>
+          <option value="0">Select Gov...</option>
+          ${governors.map(governor => `
+          <option value="${governor.id}" /> ${governor.name}</option>
+          `)} 
+      </select>`
+ }  
+//export const getGovernors = () => {
+    //let html = "<ul>"
+    // Use .map() for converting objects to <li> elements
+     //    `<select id="mineLocations" name="fullName" multiple>
+     //   <option>  </option>
+    //    ${governors.map(governor => `
+    //    <option value="${governor.id}" /> ${governor.name}</option>
+   //     `)}    
+ //  </select>` 
