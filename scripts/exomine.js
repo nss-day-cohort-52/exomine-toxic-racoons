@@ -1,4 +1,5 @@
 import { miningFacilities } from "./facilities.js"
+import { AvailableMinerals } from "./minerals.js"
 // import { JewelryStyles } from "./JewelryStyles.js"
 // import { Orders } from "./Orders.js"
 // import { Metals } from "./Metals.js"
@@ -27,7 +28,7 @@ export const Exomine = () => {
             </section>
             <section class="choices__minerals options">
                 <h2>Minerals</h2>
-                
+                ${AvailableMinerals()}
             </section>
         </article>
         <article>
