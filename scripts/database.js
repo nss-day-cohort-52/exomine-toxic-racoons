@@ -1,4 +1,10 @@
 const database = {
+    orderBuilder: {
+        id: 1,
+        governorId: 2,
+        facilityId: 3,
+        mineralId: 4
+    },
     governors: [
     {   id: 1,
         name: "Darth Vader",
@@ -199,7 +205,11 @@ export const setFacilityMineral = (id) => {
         // application can re-render and update state
         document.dispatchEvent( new CustomEvent("stateChanged") )
    
+<<<<<<< HEAD
 
+=======
+ //HEAD
+>>>>>>> b65e2060c51600c7e137ef02eaaaa83617d8026d
 
 
 
