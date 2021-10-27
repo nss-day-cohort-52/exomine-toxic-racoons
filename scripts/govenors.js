@@ -1,14 +1,9 @@
-<<<<<<< HEAD
 import {getGovenors } from "database.js"
-=======
-import {getGovenors } from ""
->>>>>>> rs
 
 export const govenors = () => {
     const govenors = getGovenors();
     return `<header class="header">
     <h1>
-<<<<<<< HEAD
     Govenors 
     </h1>
     <select>
@@ -42,22 +37,3 @@ export const govenors = () => {
     </select>
     `;
   };
-=======
-    choose a govenor
-    </h1>
-    <select>
-  <option>
-  Darth Vader
-  </option>
-  <option>
-  Spider Man
-  </option>
-  <option>
-  Dr. Strange
-  </option>
-  <option>
-  Wonder Woman
-  </option>
-  </select>
-  `
->>>>>>> rs
