@@ -205,7 +205,6 @@ export const setFacilityMineral = (id) => {
         // application can re-render and update state
         document.dispatchEvent( new CustomEvent("stateChanged") )
    
-//  HEAD
 
 
 
