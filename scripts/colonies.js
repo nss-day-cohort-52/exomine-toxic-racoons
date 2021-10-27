@@ -5,19 +5,21 @@ const colonies = getColonies()
 const colonyMinerals = getcolonyMinerals()
 //setting a variable with the value of the function that makes a copy of the colonies
 
-document.addEventListener(
+document.addEventListener(//needs to display colonies that chosen governor governs
     "change",
-    (event) => {
-        if (event.target.name === "colony") {
-            setColony(parseInt(event.target.value))
+    (changeEvent) => {
+        if (changeEvent.target.id === "governor") {
+            const chosenOption = changeEvent.target.value
+            const setColony = parseInt(chosenOption.id)
+            return setColony
+        }
     }
-}
 )
-export const Colonies = () => { //created a variable whose value is a function
+export const ColonyMinerals = () => { //created a variable whose value is a function
     let html = "<ul>" //unordered list
 
     // This is how you have been converting objects to <li> elements
-    for (const colony of colonies) { //this function will iterate through the  colonies array
+    for (const colonyMineral of colonyMinerals) { //this function will iterate through the  colonies array
         //and display a list of colonies in the html
         html += `<li>
             <input type="radio" name="colony" value="${colony.id}" /> ${metal.metal}
@@ -27,3 +29,7 @@ export const Colonies = () => { //created a variable whose value is a function
     html += "</ul>"
     return html
 }
+return `<li>
+    ${colony.name}
+    ${colonyMineral.name}
+</li>`
