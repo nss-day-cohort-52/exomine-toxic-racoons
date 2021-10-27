@@ -1,5 +1,7 @@
+import { getGovernors } from "./database.js"
 import { miningFacilities } from "./facilities.js"
 import { AvailableMinerals } from "./minerals.js"
+import { coloniesGovernor } from "./govenors.js"
 // import { JewelryStyles } from "./JewelryStyles.js"
 // import { Orders } from "./Orders.js"
 // import { Metals } from "./Metals.js"
@@ -20,7 +22,7 @@ export const Exomine = () => {
         <article class="choices">
             <section class="choices__governors options">
                 <h2>Governors</h2>
-                
+                ${coloniesGovernor()}
             </section>
             <section class="choices__facilities options">
                 <h2>Facilities</h2>
