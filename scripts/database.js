@@ -166,7 +166,8 @@ export const getFacilityMinerals = () => {
 
 export const setGovernor = (id) => {
     database.orderBuilder.governorId = id
-}
+    document.dispatchEvent( new CustomEvent("stateChanged") )
+     }
 
 export const setFacility = (id) => {
     database.orderBuilder.facilityId = id
@@ -194,10 +195,8 @@ export const setFacilityMineral = (id) => {
 
 // export const setFacility = (facilityId) => {
 //     database.transientState.selectedFacility = facilityId
-//     document.dispatchEvent( new CustomEvent("stateChanged") )
+//    document.dispatchEvent( new CustomEvent("stateChanged") )
 // }
-
-
 
 // export const purchaseMineral = () => {
 
