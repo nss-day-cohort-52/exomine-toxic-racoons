@@ -22,19 +22,10 @@ document.addEventListener(
    }  
 
 
-// export const miningFacilities = () => {
-//     let html = "<ul>"
+    // Use .map() for converting objects to <li> elements
+    // // Join all of the strings in the array into a single string
+    // html += listItemsArray.join("")
 
-//     // Use .map() for converting objects to <li> elements
-//     const listItemsArray = facilities.map(facility => {
-//         return `<li>
-//         <input type="radio" name="facility" value="${facility.id}" /> ${facility.name}
-//     </li>`
-//     })
-
-//     // Join all of the strings in the array into a single string
-//     html += listItemsArray.join("")
-
-//     html += "</ul>"
-//     return html
-// }
+    // html += "</ul>"
+    // return html
+}
