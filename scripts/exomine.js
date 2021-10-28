@@ -1,5 +1,5 @@
 import { getGovernors } from "./database.js"
-import { miningFacilities } from "./facilities.js"
+import { miningFacilities } from "./Facilities.js"
 import { AvailableMinerals } from "./minerals.js"
 import { coloniesGovernor } from "./govenors.js"
 // import { JewelryStyles } from "./JewelryStyles.js"
