@@ -203,7 +203,7 @@ export const setFacilityMineral = (id) => {
 
  // Broadcast custom event to entire documement so that the
         // application can re-render and update state
-        document.dispatchEvent( new CustomEvent("stateChanged") )
+        // document.dispatchEvent( new CustomEvent("stateChanged") )
    
 
 
