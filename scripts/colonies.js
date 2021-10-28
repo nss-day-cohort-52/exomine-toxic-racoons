@@ -1,8 +1,9 @@
-import { getColonies, getcolonyMinerals, setColony } from "./database.js" 
+import { getColonies, getcolonyMinerals, setGovernor } from "./database.js" 
 //importing copies of the array of colonies to be used and referenced 
 //to generate and display in HTML
-const colonies = getColonies()
-const colonyMinerals = getcolonyMinerals()
+// const colonies = getColonies()
+// const colonyMinerals = getcolonyMinerals()
+const setgovernor = setGovernor()
 //setting a variable with the value of the function that makes a copy of the colonies
 
 document.addEventListener(//needs to display colonies that chosen governor governs
