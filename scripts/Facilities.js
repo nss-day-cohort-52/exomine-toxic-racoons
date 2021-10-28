@@ -28,4 +28,3 @@ document.addEventListener(
 
     // html += "</ul>"
     // return html
-}

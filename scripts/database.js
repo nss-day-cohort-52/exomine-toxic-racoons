@@ -2,7 +2,6 @@ const database = {
     orderBuilder: {
         id: 1,
         facilityId: 2,
-        facilityMineralId
     },
     governors: [
     {   id: 1,
