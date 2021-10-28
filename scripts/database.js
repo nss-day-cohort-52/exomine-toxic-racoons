@@ -166,6 +166,7 @@ export const getFacilityMinerals = () => {
 
 export const setGovernor = (id) => {
     database.orderBuilder.governorId = id
+    document.dispatchEvent( new CustomEvent("stateChanged"))
 }
 
 export const setFacility = (id) => {
