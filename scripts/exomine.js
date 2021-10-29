@@ -2,6 +2,7 @@ import { getGovernors} from "./database.js"
 import { miningFacilities } from "./facilities.js"
 import { AvailableMinerals } from "./minerals.js"
 import { coloniesGovernor } from "./govenors.js"
+import { ColonyHTML } from "./colonies.js"
 // import { JewelryStyles } from "./JewelryStyles.js"
 // import { Orders } from "./Orders.js"
 // import { Metals } from "./Metals.js"
@@ -24,6 +25,9 @@ export const Exomine = () => {
                 <h2>Governors</h2>
                 ${coloniesGovernor()}
             </section>
+            <article>
+            ${ColonyHTML()}
+            </article>
             <section class="choices__facilities options">
                 <h2>Facilities</h2>
                 ${miningFacilities()}
