@@ -11,7 +11,7 @@ document.addEventListener(
     export const coloniesGovernor = () => {
       let html = "<ul>"
       // Use .map() for converting objects to <li> elements
-          return `<select id="governorLocations" name="governor">
+          return `<select id="governorLocations" name="governorLocations">
           <option value="0">Select Gov...</option>
           ${governors.map(governor => `
           <option value="${governor.id}" /> ${governor.name}</option>
