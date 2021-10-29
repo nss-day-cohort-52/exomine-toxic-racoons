@@ -6,7 +6,7 @@ document.addEventListener(
         if (event.target.name === "governor") {
             setGovernor(parseInt(event.target.value))
         }
-    }    
+    }
     )
     export const coloniesGovernor = () => {
       let html = "<ul>"
@@ -15,7 +15,7 @@ document.addEventListener(
           <option value="0">Select Gov...</option>
           ${governors.map(governor => `
           <option value="${governor.id}" /> ${governor.name}</option>
-          `)} 
+          `)}
       </select>`
     }
 //export const getGovernors = () => {
