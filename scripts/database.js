@@ -2,7 +2,7 @@ const database = {
     orderBuilder: {
         id: 1,
         facilityId: 2,
-        facilityMineralId
+        //facilityMineralId
     },
     governors: [
     {   id: 1,
@@ -210,7 +210,7 @@ export const getFacilityMinerals = () => {
 
 export const setGovernor = (id) => {
     database.orderBuilder.governorId = id
-    document.dispatchEvent( new CustomEvent("stateChanged"))
+    //document.dispatchEvent( new CustomEvent("stateChanged"))
 }
 
 export const setFacility = (id) => {

@@ -1,30 +1,42 @@
-import { getColonies, getMinerals, getGovernor, getColonyMinerals } from "./database.js" 
+import { getColonies, getMinerals, getGovernors, getColonyMinerals, setGovernor } from "./database.js" 
 import { coloniesGovernor } from "./govenors.js"
 //importing copies of the array of colonies to be used and referenced 
 //to generate and display in HTML
 // const colonies = getColonies()
 // const colonyMinerals = getcolonyMinerals()
-const governors = getGovernor()
+const governors = getGovernors()
 const colonies = getColonies()
 const minerals = getMinerals()
 const colonyMineral = getColonyMinerals()
+const governorChosen = coloniesGovernor()
 const buildColonyListItem = (colony) => {
     const foundGovernor = governors.find(
         (governor) => {
-            return governor.id === colony.id
+            return governor.id === setGovernor()
         }
     )
-const governorChosen = coloniesGovernor()
 //setting a variable with the value of the function that makes a copy of the colonies
 }
+//const foundColony = 
 
 
 
 
 export const Colony = () => {
     let html = ""
-
-    for ()
+    
+    const listItems = colonies.map(colony => {
+        if (colonies.colonyid === governorChosen.colonyid) {
+            return `<li>
+                ${colony.name}
+                ${colonyMineral.name}
+                </li>`
+                
+            }
+            
+        })
+        html += ""
+        return html
 
 }
 // document.addEventListener(//needs to display colonies that chosen governor governs
@@ -37,21 +49,13 @@ export const Colony = () => {
 //         }
 //     }
 // )
-export const ColonyMinerals = () => { //created a variable whose value is a function
-    let html = "<ul>" //unordered list
+// export const ColonyMinerals = () => { //created a variable whose value is a function
+//     let html = "<ul>" //unordered list
 
-    // This is how you have been converting objects to <li> elements
-    for (const colonyMineral of colonyMinerals) { //this function will iterate through the  colonies array
-        //and display a list of colonies in the html
-        html += `<li>
-            <input type="radio" name="colony" value="${colony.id}" /> ${metal.metal}
-        </li>`
-    }
-
-    html += "</ul>"
-    return html
-}
-return `<li>
-    ${colony.name}
-    ${colonyMineral.name}
-</li>`
+//     // This is how you have been converting objects to <li> elements
+//     for (const colonyMineral of colonyMinerals) { //this function will iterate through the  colonies array
+//         //and display a list of colonies in the html
+//         html += `<li>
+//             <input type="radio" name="colony" value="${colonyMineral.id}" /> ${colony.name}
+//         </li>`
+//     }
