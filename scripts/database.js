@@ -181,7 +181,9 @@ const database = {
             id: 1,
             mineralId: 2
         }
-    ]
+    ],
+    transientState :
+    {}
 }
 
 export const getGovernors = () => {
@@ -256,7 +258,9 @@ export const addCustomOrder = () => {
 
     document.dispatchEvent(new CustomEvent("stateChanged"))
 }
-
+export const getSelectedGovernor = () => {
+    return database.transientState.governorId
+}
 
 
 // export const setFacility = (facilityId) => {
