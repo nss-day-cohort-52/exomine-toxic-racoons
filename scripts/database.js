@@ -179,7 +179,9 @@ const database = {
     customOrders: [
         {
             id: 1,
-            mineralId: 2
+            mineralId: 2,
+            facilityMineralId: 3,
+            facilityMineralAmount: 4
         }
     ]
 }

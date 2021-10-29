@@ -3,6 +3,7 @@ import { miningFacilities } from "./facilities.js"
 import { AvailableMinerals } from "./minerals.js"
 import { coloniesGovernor } from "./govenors.js"
 import { ColonyHTML } from "./colonies.js"
+import { Orders } from "./Spaceazon.js"
 // import { JewelryStyles } from "./JewelryStyles.js"
 // import { Orders } from "./Orders.js"
 // import { Metals } from "./Metals.js"
@@ -40,8 +41,9 @@ export const Exomine = () => {
         <article>
             <button id="orderButton">Create Custom Order</button>
         </article>
-        <article class="customOrders">
+        <article class="customOrders">            
             <h2>Mineral Orders</h2>
+            ${Orders()}
             
         </article>
     `
