@@ -1,8 +1,7 @@
 const database = {
     orderBuilder: {
         id: 1,
-        facilityId: 2,
-        facilityMineralId
+        facilityId: 0
     },
     governors: [
     {   id: 1,
@@ -192,6 +191,10 @@ export const getFacilities = () => {
     return database.facilities.map(facility => ({...facility}))
 }
 
+export const getSelectedFacility = () => {
+    return database.orderBuilder.facilityId
+}
+
 export const getMinerals = () => {
     return database.minerals.map(mineral => ({...mineral}))
 }
@@ -215,10 +218,12 @@ export const setGovernor = (id) => {
 
 export const setFacility = (id) => {
     database.orderBuilder.facilityId = id
+    document.dispatchEvent( new CustomEvent("stateChanged"))
 }
 
 export const setMineral = (id) => {
-database.orderBuilder.mineralId = id    
+    database.orderBuilder.mineralId = id
+    document.dispatchEvent( new CustomEvent("stateChanged"))    
 }
 
 export const getOrders = () => {
@@ -234,7 +239,8 @@ export const setColonyMineral = (id) => {
 }
 
 export const setFacilityMineral = (id) => {
-    database.orderBuilder.facilityMineralId = id 
+    database.orderBuilder.facilityMineralId = id
+    document.dispatchEvent( new CustomEvent("stateChanged")) 
 }
 
 export const addCustomOrder = () => {

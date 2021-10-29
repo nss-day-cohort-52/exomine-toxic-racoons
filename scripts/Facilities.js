@@ -26,6 +26,5 @@ document.addEventListener(
     // // Join all of the strings in the array into a single string
     // html += listItemsArray.join("")
 
-    // html += "</ul>"
-    // return html
-}
+     //html += "</ul>"
+     //return html
