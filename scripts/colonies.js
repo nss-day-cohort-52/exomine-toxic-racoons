@@ -7,7 +7,7 @@ import { coloniesGovernor } from "./govenors.js"
 const governors = getGovernors()
 const colonies = getColonies()
 const minerals = getMinerals()
-const colonyMineral = getColonyMinerals()
+const colonyMinerals = getColonyMinerals()
 const governorChosen = coloniesGovernor()
 //setting a variable with the value of the function that makes a copy of the colonies
 //const foundColony = 
@@ -30,7 +30,14 @@ export const ColonyHTML = () => {
                 return colony.id === foundGovernor.colonyId
             }
             )
-            let html = `${foundColony.name}`
+            const foundcolonyMineral = colonyMinerals.find((colonyMineral) => {
+                return colonyMineral.colonyId === foundColony.id
+            })
+            const foundMineral = minerals.find((mineral) => {
+                return mineral.id === foundcolonyMineral.mineralId
+            })
+            let html = `${foundColony.name} needs ${foundcolonyMineral.amount} tons of
+            ${foundMineral.mineral}`
             return html
     } else {
         return `Colonies and Needed Minerals`
