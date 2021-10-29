@@ -73,4 +73,5 @@ export const ColonyHTML = () => {
 //         html += `<li>
 //             <input type="radio" name="colony" value="${colonyMineral.id}" /> ${colony.name}
 //         </li>`
-//     }
+//     
+}
