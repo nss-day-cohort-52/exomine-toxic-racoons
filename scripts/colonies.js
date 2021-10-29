@@ -4,7 +4,7 @@ import { coloniesGovernor } from "./govenors.js"
 //to generate and display in HTML
 // const colonies = getColonies()
 // const colonyMinerals = getcolonyMinerals()
-//const governors = getGovernors()
+const governors = getGovernors()
 const colonies = getColonies()
 const minerals = getMinerals()
 const colonyMineral = getColonyMinerals()
@@ -18,7 +18,7 @@ const governorChosen = coloniesGovernor()
 export const ColonyHTML = () => {    
     const chosenOption = getSelectedGovernor()
     
-    if (chosenOption.governorId){
+    if (chosenOption.governorId !== 0) {
         const governors = getGovernors()
 
         const foundGovernor = governors.find(
@@ -26,7 +26,6 @@ export const ColonyHTML = () => {
                 return chosenOption.governorId === governor.id
             }
         )
-        foundGovernor.colonyId 
             const foundColony = colonies.find((colony) => {
                 return colony.id === foundGovernor.colonyId
             }

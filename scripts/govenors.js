@@ -3,7 +3,7 @@ const governors = getGovernors()
 document.addEventListener(
     "change",
     (event) => {
-        if (event.target.name === "governor") {
+        if (event.target.name === "governorLocations") {
             setGovernor(parseInt(event.target.value))
         }
     }

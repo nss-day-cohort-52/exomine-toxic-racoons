@@ -2,7 +2,7 @@ const database = {
     orderBuilder: {
         id: 1,
         facilityId: 2,
-        governorId: 1
+        governorId: 0
     },
     governors: [
     {   id: 1,
@@ -257,7 +257,7 @@ export const addCustomOrder = () => {
     document.dispatchEvent(new CustomEvent("stateChanged"))
 }
 export const getSelectedGovernor = () => {
-    return database.orderBuilder.governorId
+    return database.orderBuilder
 }
 
 
